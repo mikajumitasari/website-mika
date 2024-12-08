@@ -1,0 +1,383 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  line-height: 1.8em;
+  background-color: #f4f4f4;
+}
+
+/* Link Styles */
+a {
+  color: #e3ebeb;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* Header */
+header {
+  padding: 2em;
+  text-align: center;
+  background-image: url('./img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+
+ header h1 {
+  font-size: 2.5em;
+  color: #FFDE59; /* Warna kuning terang */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Bayangan teks */
+  margin: 0.5em 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 2em;
+  background: linear-gradient(45deg, #2c3e50, #3498db); /* Gradasi biru tua ke biru cerah */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5em;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #FFDE59; /* Warna kuning hover */
+  transform: scale(1.1);
+}
+
+.hamburger {
+  display: none; /* Tetap sembunyikan untuk layar besar */
+}
+
+.hamburger .line {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  margin: 3px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: rgba(44, 62, 80, 0.9);
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+/* Main Content */
+main {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+/* Section Styles */
+section {
+  margin: 2em 0;
+  padding: 1.5em;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  font-size: 1.8em;
+  margin-bottom: 1em;
+  text-align: center; /* Center the section title */
+  color: #333;
+}
+
+/* Image Styles */
+
+section p {
+  text-align: justify;
+}
+
+/* Work Card Styles */
+.work-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5em;
+  margin: 1em 0;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+/* Footer */
+footer {
+  padding: 1em 2em;
+  text-align: center;
+  background: #1f3b4d;
+  color: white;
+}
+
+footer a {
+  color: #89d9a1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffde59;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  section {
+    padding: 1em;
+  }
+
+  section img {
+    max-width: 100%;
+  }
+}
+
+/* Contact Section */
+/* Section Kontak */
+#kontak {
+  padding: 4em 1em;
+  background-color: #f7f7f7;
+  text-align: center;
+  word-wrap: break-word; /* Memecah kata yang panjang */
+  overflow-wrap: break-word; /* Memecah kata yang panjang */
+}
+
+#kontak h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 0.5em;
+}
+
+#kontak p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 2em;
+}
+
+.kontak-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.kontak-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+.kontak-item {
+  background-color: white;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.kontak-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.kontak-item i {
+  font-size: 2em;
+  color: #007bff;
+  margin-bottom: 0.5em;
+}
+
+.kontak-item p {
+  font-size: 1em;
+  color: #333;
+}
+
+.kontak-item a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.kontak-item a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .kontak-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* Projects Section */
+#projects {
+  padding: 2em;
+  background-color: #f1f1f1;
+}
+
+.works {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.work-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+.work-card {
+  flex: 1 1 calc(100% - 1em);
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5em;
+}
+
+.work-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #333333;
+}
+
+.work-card p,
+.work-card ol,
+.work-card ul {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #666666;
+  margin-bottom: 1em;
+}
+
+.video-container {
+  margin-top: 1em;
+  text-align: center;
+}
+
+iframe {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Drive Link Button */
+.button-group {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.button-group .btn.drive {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.button-group .btn.drive:hover {
+  background-color: #0056b3;
+}
+
+.button-group .btn.drive i {
+  margin-right: 8px;
+}
+
+#tentang-saya {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+#tentang-saya .foto-profil {
+  width: 500px;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Frame kotak tanpa border */
+}
+
+#tentang-saya .foto-profil img {
+  width: 200;
+  height: 100%;
+  object-fit: cover;
+}
+
+#tentang-saya .deskripsi p {
+  text-align: justify;
+}
+
